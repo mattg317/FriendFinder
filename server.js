@@ -12,7 +12,7 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
 var PORT = process.env.PORT || 3000;
-app.use(express.static('public'));
+app.use(express.static(__dirname+'public'));
 
 require('./app/routing/html-routes.js')(app);
 require('./app/routing/api-routes.js')(app);
